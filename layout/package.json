@@ -1,0 +1,4 @@
+{
+  "name": "react-kinops-common/layout",
+  "main": "../src/redux/modules/layout"
+}
