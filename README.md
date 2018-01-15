@@ -24,6 +24,16 @@ combineReducers({ ...reducers })
 combineReducers({ ...reducers, ...kinopsReducers })
 ```
 
+There is a layout Redux module that allows you to know in your React code weather the browser is in mobile or desktop
+mode. You will need to execute the following block of code with the `store` object so it can begin dispatching layout
+mode changes to Redux.
+
+```
+import { createLayoutListener } from 'react-kinops-common/layout';
+
+createLayoutListener(store);
+```
+
 ### Step 3. Add the sagas to your existing sagas.
 
 Then you need to merge your sagas with the shared sagas:
