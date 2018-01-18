@@ -58,13 +58,15 @@ export const Header = ({
       {!isGuest && (
         <UncontrolledDropdown>
           <DropdownToggle caret nav role="button">
-            {currentKapp.name}
+            {currentKapp ? currentKapp.name : 'Home'}
           </DropdownToggle>
           <DropdownMenu>
-            <DropdownItem tag="a" href={bundle.spaceLocation()}>
-              <span className="fa fa-fw fa-home" />Home
-            </DropdownItem>
-            <DropdownItem divider />
+            {currentKapp && (
+              <DropdownItem tag="a" href={bundle.spaceLocation()}>
+                <span className="fa fa-fw fa-home" />Home
+              </DropdownItem>
+            )}
+            {currentKapp && <DropdownItem divider />}
             {predefinedKapps.map(thisKapp => (
               <BuildKappLink kapp={thisKapp} key={thisKapp.slug} />
             ))}
