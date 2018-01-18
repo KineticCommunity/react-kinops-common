@@ -70,6 +70,7 @@
     "font-awesome-svg-png": "^1.2.2",
     "lodash.isplainobject": "^4.0.6",
     "lodash.isstring": "^4.0.1",
+    "modularscale-sass": "^3.0.4",
     "react-kinetic-core": "^0.3.1",
     "react-svg-inline": "^2.0.1",
     "react-transition-group": "^1.1.2",

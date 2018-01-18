@@ -29,9 +29,9 @@ mode. You will need to execute the following block of code with the `store` obje
 mode changes to Redux.
 
 ```
-import { createLayoutListener } from 'react-kinops-common/layout';
+import { createLayoutListeners } from 'react-kinops-common/layout';
 
-createLayoutListener(store);
+createLayoutListeners(store);
 ```
 
 ### Step 3. Add the sagas to your existing sagas.
@@ -39,7 +39,7 @@ createLayoutListener(store);
 Then you need to merge your sagas with the shared sagas:
 
 ```
-import { saga as kinopsSagas, combineSagas } from 'react-kinops-common';
+import { sagas as kinopsSagas, combineSagas } from 'react-kinops-common';
 
 // From this:
 sagaMiddleware.run(sagas));
