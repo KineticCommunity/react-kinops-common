@@ -53,7 +53,31 @@ sagaMiddleware.run(combineSagas([sagas, kinopsSagas]));
 import 'react-kinops-common/styles/master.scss';
 ```
 
-### Step 5. Add the components
+### Step 5. Initialize the state.
+
+You will need to dispatch the `LOAD_APP` action in one of your components, preferably the `App` component in its `componentWillMount` lifecycle:
+
+```
+import { actions as kinopsActions } from 'react-kinops-common/kinops';
+
+export const class App extends Component {
+  componentWillMount() {
+    this.props.loadApp();
+  }
+
+  render() {
+    /* App content */
+  }
+}
+
+const mapDispatchToProps = {
+  loadApp: kinopsActions.loadApp,
+};
+
+export const AppContainer = connect(null, mapDispatchToProps)(App);
+```
+
+### Step 6. Add the components
 
 ```
 import { HeaderContainer, ToastsContainer, ModalFormContainer } from 'react-kinops-common';
