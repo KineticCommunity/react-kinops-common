@@ -29,8 +29,8 @@ mode. You will need to execute the following block of code with the `store` obje
 mode changes to Redux.
 
 ```
-import { createLayoutListeners } from 'react-kinops-common/layout';
-
+import { LayoutModule } from 'react-kinops-common';
+const { createLayoutListeners } = LayoutModule;
 createLayoutListeners(store);
 ```
 
@@ -58,7 +58,9 @@ import 'react-kinops-common/styles/master.scss';
 You will need to dispatch the `LOAD_APP` action in one of your components, preferably the `App` component in its `componentWillMount` lifecycle:
 
 ```
-import { actions as kinopsActions } from 'react-kinops-common/kinops';
+import { KinopsModule } from 'react-kinops-common';
+
+const { actions: kinopsActions } = KinopsModule;
 
 export const class App extends Component {
   componentWillMount() {
@@ -97,7 +99,8 @@ You will need to follow all of the steps above so that the Redux store, Sagas, a
 all loaded and ready. To display a toast you only need to dispatch the action.
 
 ```
-import { actions } from 'react-kinops-common/toasts';
+import { ToastsModule } from 'react-kinops-common';
+const { actions } = ToastsModule;
 
 const mapDispatchToProps = {
   addError: actions.addError,

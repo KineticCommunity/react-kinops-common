@@ -5,7 +5,9 @@ import { ModalFormContainer } from './components/ModalFormContainer';
 import { ToastsContainer } from './components/ToastsContainer';
 import * as Utils from './utils';
 import reducers from './redux/reducers';
-import * as kinopsModule from './redux/modules/kinops';
+import * as KinopsModule from './redux/modules/kinops';
+import * as LayoutModule from './redux/modules/layout';
+import * as ToastsModule from './redux/modules/toasts';
 import { sagas, combineSagas } from './redux/sagas';
 
 // Components
@@ -21,4 +23,11 @@ export {
 export { Utils };
 
 // Redux / Saga
-export { reducers, sagas, combineSagas, kinopsModule };
+export {
+  reducers,
+  sagas,
+  combineSagas,
+  KinopsModule,
+  LayoutModule,
+  ToastsModule,
+};

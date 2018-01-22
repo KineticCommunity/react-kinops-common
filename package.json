@@ -1,6 +1,6 @@
 {
   "name": "react-kinops-common",
-  "version": "0.3.0",
+  "version": "0.3.3",
   "description":
     "Utilities and components for development with React and Kinops",
   "author": "Kinetic Data, Inc",
