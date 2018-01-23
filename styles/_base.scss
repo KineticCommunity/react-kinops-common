@@ -20,3 +20,8 @@ a{
 .tooltip {
   font-size: .75rem;
 }
+
+.main-content {
+  display: flex;
+  overflow-y: auto !important;
+}
