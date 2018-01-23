@@ -1,8 +1,7 @@
 {
   "name": "react-kinops-common",
-  "version": "0.3.3",
-  "description":
-    "Utilities and components for development with React and Kinops",
+  "version": "0.3.4",
+  "description": "Utilities and components for development with React and Kinops",
   "author": "Kinetic Data, Inc",
   "license": "MIT",
   "main": "dist/react-kinops-common.js",
@@ -14,8 +13,7 @@
     "build": "cross-env NODE_ENV=production webpack",
     "test": "jest",
     "test:watch": "jest --watch --notify",
-    "test:ci":
-      "jest --ci --testResultsProcessor=./node_modules/jest-junit-reporter"
+    "test:ci": "jest --ci --testResultsProcessor=./node_modules/jest-junit-reporter"
   },
   "devDependencies": {
     "axios": "^0.17.1",
@@ -81,8 +79,7 @@
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-        "<rootDir>/__mocks__/fileMock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less|scss|sass)$": "<rootDir>/__mocks__/styleMock.js"
     }
   },
