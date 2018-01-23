@@ -18,6 +18,9 @@ import { AlertsContainer } from './AlertsContainer';
 import { ProfileContainer } from './ProfileContainer';
 import hamburgerIcon from '../images/hamburger.svg';
 
+export const dropdownTitleName = currentKapp =>
+  currentKapp ? currentKapp.name : 'Home';
+
 const BuildKappLink = ({ kapp, nameOverride = kapp.name }) => (
   <DropdownItem tag="a" href={bundle.kappLocation(kapp.slug)}>
     <span
@@ -44,7 +47,7 @@ export const Header = ({
   <Navbar color="faded" light fixed="top">
     <Nav className="nav-header">
       {hasSidebar && (
-        <NavItem>
+        <NavItem id="header-sidebar-toggle">
           <NavLink
             className="drawer-button icon-wrapper"
             role="button"
@@ -56,9 +59,9 @@ export const Header = ({
         </NavItem>
       )}
       {!isGuest && (
-        <UncontrolledDropdown>
+        <UncontrolledDropdown id="header-kapp-dropdown">
           <DropdownToggle caret nav role="button">
-            {currentKapp ? currentKapp.name : 'Home'}
+            {dropdownTitleName(currentKapp)}
           </DropdownToggle>
           <DropdownMenu>
             {currentKapp && (

@@ -14,9 +14,11 @@ const kappBySpaceAttribute = (state, slugAttributeName) =>
 
 // Kapp Selectors
 export const selectCurrentKapp = state =>
-  !state.kinops.loading
-    ? state.kinops.kapps.find(kapp => kapp.slug === `${bundle.kappSlug()}`)
+  !state.kinops.loading && bundle.kappSlug()
+    ? state.kinops.kapps.find(kapp => kapp.slug === `${bundle.kappSlug()}`) ||
+      null
     : null;
+
 export const selectAdminKapp = state =>
   kappBySpaceAttribute(state, 'Admin Kapp Slug');
 export const selectQueueKapp = state =>
