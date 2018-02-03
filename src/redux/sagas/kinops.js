@@ -16,7 +16,7 @@ export function* fetchAppTask() {
   const { profile: { profile }, alerts: { submissions } } = yield all({
     profile: call(CoreAPI.fetchProfile, {
       include:
-        'attributes,profileAttributes,memberships,memberships.team,memberships.team.attributes,memberships.team.memberships,memberships.team.memberships.user,attributes,space,space.attributes,space.kapps,space.kapps.attributes',
+        'attributes,profileAttributes,memberships,memberships.team,memberships.team.attributes,memberships.team.memberships,memberships.team.memberships.user,attributes,space,space.details,space.attributes,space.kapps,space.kapps.attributes',
     }),
     alerts: call(CoreAPI.searchSubmissions, {
       kapp: 'admin',
