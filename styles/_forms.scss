@@ -35,6 +35,13 @@ form {
 
 
 form {
+  // Headings
+  section h1{
+    margin-top: 0;
+    & ~ section h1{
+      margin-top: 1rem;
+    }
+  }
   // Checkboxes & Radios
   .checkbox label,
   .radio label {
@@ -67,7 +74,7 @@ form {
     }
 
     label {
-      margin-bottom: 0;
+      margin-bottom : 0;
       cursor : pointer;
       line-height : 1;
       &:first-child:not(.field-label) {
@@ -130,7 +137,7 @@ form {
     border : 1px solid $blue3;
     border-radius : 3px;
     outline : none;
-    width:100%;
+    width : 100%;
     &[disabled] {
       cursor : not-allowed;
     }
@@ -196,8 +203,7 @@ form {
 
 /* Error Messages
 *-------------------------------------- */
-form{
-
+form {
   .errors {
     display : none;
     margin : 0 auto;
@@ -227,14 +233,14 @@ form{
       label,
       label.field-label,
       .empty-message {
-        color: green;
+        color : green;
       }
       .form-control,
       input,
       select,
-      textarea  {
-        border-color: green;
-        box-shadow: none;
+      textarea {
+        border-color : green;
+        box-shadow : none;
       }
     }
 
@@ -242,14 +248,14 @@ form{
       label,
       label.field-label,
       .empty-message {
-        color: yellow;
+        color : yellow;
       }
       .form-control,
       input,
       select,
-      textarea  {
-        border-color: yellow;
-        box-shadow: none;
+      textarea {
+        border-color : yellow;
+        box-shadow : none;
       }
     }
 
@@ -257,14 +263,14 @@ form{
       label,
       label.field-label,
       .empty-message {
-        color: red;
+        color : red;
       }
       .form-control,
       input,
       select,
       textarea {
-        border-color: red;
-        box-shadow: none;
+        border-color : red;
+        box-shadow : none;
       }
     }
   }
@@ -301,8 +307,8 @@ section.page {
     .radio,
     .checkbox {
       &:after {
-        visibility : hidden;
-        display : block;
+        visibility: hidden;
+        display:block;
         font-size : 0;
         content : ' ';
         clear : both;
@@ -427,6 +433,16 @@ section.page {
       background-color : transparent;
       box-shadow : none;
     }
+  }
+}
+
+/* Embedded Core Forms
+ *-------------------------------------- */
+.embedded-core-form{
+  padding: 0 1.5rem;
+  form{
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
