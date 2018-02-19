@@ -162,9 +162,11 @@
       &.filter-section {
         padding-bottom: 3rem;
         h5 {
+          font-weight: 600;
           color: $blue1;
           font-size: 1rem;
           padding: 1rem;
+          margin: 0;
         }
         label {
           border-bottom: 1px solid rgba(244, 246, 249, 1);

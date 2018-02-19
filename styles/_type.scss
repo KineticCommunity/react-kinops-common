@@ -68,9 +68,11 @@ hr, .hr {
   border: 1px solid;
   margin: -1px 0;
 }
-a, b, i, strong, em, code {
-  line-height: 0;
-}
+// Misused line-height
+// a, b, i, strong, em, code {
+//   line-height: 0;
+// }
+
 sub, sup {
   line-height: 0;
   position: relative;
