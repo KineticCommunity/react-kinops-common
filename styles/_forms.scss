@@ -106,7 +106,10 @@ form {
       border-radius : 3px;
       width : 100%;
       outline : none;
-      padding : 0.25rem;
+      padding : 0.5rem;
+      &::-webkit-input-placeholder {
+        color: rgba($black-50, 0.5);
+      }
     }
     &[type='text'][disabled],
     &[type='password'][disabled],
@@ -138,6 +141,10 @@ form {
     border-radius : 3px;
     outline : none;
     width : 100%;
+    padding : 0.5rem;
+    &::-webkit-input-placeholder {
+      color: rgba($black-50, 0.5);
+    }
     &[disabled] {
       cursor : not-allowed;
     }
