@@ -1,4 +1,3 @@
-
 .navbar {
   padding: 0;
   background-color: $white;
@@ -21,7 +20,7 @@
   display: flex;
 }
 
-.nav.nav-header .dropdown-menu{
+.nav.nav-header .dropdown-menu {
   border-radius: 0;
   border: none;
   filter: drop-shadow(rgba(0, 0, 0, 0.3) 0 3px 4px);
@@ -37,13 +36,13 @@
     top: -20px;
     z-index: 9998;
   }
-  &.alerts-menu:after{
+  &.alerts-menu:after {
     left: 93%;
   }
-  &.profile-menu:after{
+  &.profile-menu:after {
     left: 88%;
   }
-  .dropdown-item{
+  .dropdown-item {
     padding: 1rem 1.5rem;
     line-height: 1;
   }
@@ -68,7 +67,7 @@
 
 .navbar .drawer-button {
   border-right: 1px solid $gray2;
-  .icon-svg path{
+  .icon-svg path {
     fill: $black;
   }
 }

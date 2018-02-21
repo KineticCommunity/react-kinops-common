@@ -2,12 +2,11 @@
  *   Tables
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-
 /* Attachment files
  *-------------------------------------- */
- .empty > .file-table > .file-header {
-   display: none;
- }
+.empty > .file-table > .file-header {
+  display: none;
+}
 
 .file-table {
   display: table;
@@ -31,9 +30,9 @@
   display: table-row;
   > span {
     display: table-cell;
-    padding: .5rem;
+    padding: 0.5rem;
     > a {
-      padding: 0 .5rem;
+      padding: 0 0.5rem;
     }
   }
 }
@@ -47,5 +46,5 @@
 }
 
 .file-container {
-   display: table-row-group;
- }
+  display: table-row-group;
+}

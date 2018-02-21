@@ -2,111 +2,109 @@
  *   Forms
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 form {
-  margin-left : 0;
-  padding : 0.75rem 0.75rem 3rem 0.75rem;
-  font-weight : 400;
-  font-size : 0.875rem;
-  overflow : hidden;
-  background : $white;
+  margin-left: 0;
+  padding: 0.75rem 0.75rem 3rem 0.75rem;
+  font-weight: 400;
+  font-size: 0.875rem;
+  overflow: hidden;
+  background: $white;
   label {
     /* Make the label a block */
-    color : rgba($black, 0.75);
-    display : block;
-    font-size : 0.875rem;
-    font-weight : 600;
-    margin-bottom : 0.375rem;
-    line-height : 0.75rem;
+    color: rgba($black, 0.75);
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.375rem;
+    line-height: 0.75rem;
     &.field-label {
-      margin-top : 0.75rem;
-      padding : 0;
-      width : 100%;
+      margin-top: 0.75rem;
+      padding: 0;
+      width: 100%;
     }
   }
 }
-
 
 // Required asterisk after label
 .checkbox.required label:first-child:after,
 .radio.required label:first-child:after,
 .form-group.required label:after {
-  content : '*';
-  color : red;
+  content: '*';
+  color: red;
 }
-
 
 form {
   // Headings
-  section h1{
+  section h1 {
     margin-top: 0;
-    & ~ section h1{
+    & ~ section h1 {
       margin-top: 1rem;
     }
   }
   // Checkboxes & Radios
   .checkbox label,
   .radio label {
-    min-height : 20px;
-    padding-left : 1.5rem;
-    font-weight : 400;
-    cursor : pointer;
+    min-height: 20px;
+    padding-left: 1.5rem;
+    font-weight: 400;
+    cursor: pointer;
   }
   .radio label:first-child {
-    padding-left : 0;
-    font-weight : 600;
+    padding-left: 0;
+    font-weight: 600;
   }
   .checkbox label {
     &:first-child {
-      padding-left : 0;
-      font-weight : 600;
+      padding-left: 0;
+      font-weight: 600;
     }
-     + input {
-      padding-left : 2rem;
+    + input {
+      padding-left: 2rem;
     }
   }
   .radio,
   .checkbox {
     &:after {
-      visibility : hidden;
-      display : block;
-      font-size : 0;
-      content : ' ';
-      clear : both;
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: ' ';
+      clear: both;
     }
 
     label {
-      margin-bottom : 0;
-      cursor : pointer;
-      line-height : 1;
+      margin-bottom: 0;
+      cursor: pointer;
+      line-height: 1;
       &:first-child:not(.field-label) {
-        margin-right : 2rem;
-        margin-left : 1rem;
+        margin-right: 2rem;
+        margin-left: 1rem;
       }
       &:not(.field-label) {
-        float : left;
-        margin-right : 1.5rem;
-        margin-left : 0;
+        float: left;
+        margin-right: 1.5rem;
+        margin-left: 0;
       }
     }
   }
-  .checkbox-inline input[type=checkbox],
-  .checkbox input[type=checkbox],
-  .radio-inline input[type=radio],
-  .radio input[type=radio] {
-    position : absolute;
-    margin-top : 4px\9;
-    margin-left : -20px;
+  .checkbox-inline input[type='checkbox'],
+  .checkbox input[type='checkbox'],
+  .radio-inline input[type='radio'],
+  .radio input[type='radio'] {
+    position: absolute;
+    margin-top: 4px\9;
+    margin-left: -20px;
   }
 
   // Inputs
   input {
     &[type='text'],
     &[type='password'] {
-      background : #fff;
-      border : 1px solid $blue3;
-      border-radius : 3px;
-      width : 100%;
-      outline : none;
-      padding : 0.5rem;
+      background: #fff;
+      border: 1px solid $blue3;
+      border-radius: 3px;
+      width: 100%;
+      outline: none;
+      padding: 0.5rem;
       &::-webkit-input-placeholder {
         color: rgba($black-50, 0.5);
       }
@@ -116,11 +114,11 @@ form {
     &[type='radio'][disabled],
     &[type='checkbox'][disabled],
     &[disabled] {
-      cursor : not-allowed;
+      cursor: not-allowed;
     }
     &[disabled] {
-      background-color : #eee;
-      opacity : 1;
+      background-color: #eee;
+      opacity: 1;
     }
     &[readonly],
     &[type='text'][readonly],
@@ -130,60 +128,60 @@ form {
     &[type='email'][readonly],
     &[type='number'][readonly],
     &[type='password'][readonly] {
-      background-color : #eee;
-      opacity : 1;
+      background-color: #eee;
+      opacity: 1;
     }
   }
   // Textarea
   textarea {
-    background : #fff;
-    border : 1px solid $blue3;
-    border-radius : 3px;
-    outline : none;
-    width : 100%;
-    padding : 0.5rem;
+    background: #fff;
+    border: 1px solid $blue3;
+    border-radius: 3px;
+    outline: none;
+    width: 100%;
+    padding: 0.5rem;
     &::-webkit-input-placeholder {
       color: rgba($black-50, 0.5);
     }
     &[disabled] {
-      cursor : not-allowed;
+      cursor: not-allowed;
     }
     &[disabled],
     &[readonly] {
-      background-color : #eee;
-      opacity : 1;
+      background-color: #eee;
+      opacity: 1;
     }
   }
   // Focus
   input[type='text']:focus,
   textarea:focus {
-    border-color : $blue2;
+    border-color: $blue2;
   }
   select {
-    padding : 1rem 1.5rem;
-    font-size : 0.875rem;
-    line-height : 1.5rem;
-    color : $black;
-    background-color : $white;
-    background-image : none;
-    border : 1px solid $blue3;
-    border-radius : 0.4rem;
-    width : 80%;
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: $black;
+    background-color: $white;
+    background-image: none;
+    border: 1px solid $blue3;
+    border-radius: 0.4rem;
+    width: 80%;
     // Testing
-    display : block;
-    text-decoration : none;
-    width : 100%;
-    height : 30px;
-    border-image : initial;
-    outline : none;
-    border-radius : 0.5rem;
-    transition : border-color 0.3s linear;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 30px;
+    border-image: initial;
+    outline: none;
+    border-radius: 0.5rem;
+    transition: border-color 0.3s linear;
     &[disabled] {
-      cursor : not-allowed;
+      cursor: not-allowed;
     }
     &[disabled] {
-      background-color : #eee;
-      opacity : 1;
+      background-color: #eee;
+      opacity: 1;
     }
   }
 }
@@ -193,18 +191,18 @@ form {
 .requested-for-display-name {
   span.fa-edit,
   span.fa-times-circle {
-    margin-left : 5px;
-    cursor : pointer;
+    margin-left: 5px;
+    cursor: pointer;
   }
 }
 
 .tt-menu {
-  background : rgb(255, 255, 255);
-  border-width : 1px;
-  border-style : solid;
-  border-color : rgb(207, 207, 207);
+  background: rgb(255, 255, 255);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(207, 207, 207);
   .fa.pull-left {
-    margin : 0;
+    margin: 0;
   }
 }
 
@@ -212,25 +210,25 @@ form {
 *-------------------------------------- */
 form {
   .errors {
-    display : none;
-    margin : 0 auto;
-    width : 90%;
+    display: none;
+    margin: 0 auto;
+    width: 90%;
   }
   .errors {
-    font-size : 1rem;
-    background-color : #faf0ef;
-    border : 0.1rem solid #d5d5d5;
-    color : #000;
-    margin-top : 1.5rem;
-    margin-bottom : 1.5rem;
-    width : 60%;
+    font-size: 1rem;
+    background-color: #faf0ef;
+    border: 0.1rem solid #d5d5d5;
+    color: #000;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 60%;
     p {
-      font-style : bold;
-      font-size : larger;
-      background-color : #c00;
-      border-bottom : 0.1rem solid #d5d5d5;
-      color : white;
-      padding : 0.25rem 0.5rem;
+      font-style: bold;
+      font-size: larger;
+      background-color: #c00;
+      border-bottom: 0.1rem solid #d5d5d5;
+      color: white;
+      padding: 0.25rem 0.5rem;
     }
   }
   .form-group,
@@ -240,14 +238,14 @@ form {
       label,
       label.field-label,
       .empty-message {
-        color : green;
+        color: green;
       }
       .form-control,
       input,
       select,
       textarea {
-        border-color : green;
-        box-shadow : none;
+        border-color: green;
+        box-shadow: none;
       }
     }
 
@@ -255,14 +253,14 @@ form {
       label,
       label.field-label,
       .empty-message {
-        color : yellow;
+        color: yellow;
       }
       .form-control,
       input,
       select,
       textarea {
-        border-color : yellow;
-        box-shadow : none;
+        border-color: yellow;
+        box-shadow: none;
       }
     }
 
@@ -270,14 +268,14 @@ form {
       label,
       label.field-label,
       .empty-message {
-        color : red;
+        color: red;
       }
       .form-control,
       input,
       select,
       textarea {
-        border-color : red;
-        box-shadow : none;
+        border-color: red;
+        box-shadow: none;
       }
     }
   }
@@ -287,79 +285,79 @@ form {
  *-------------------------------------- */
 section.page {
   .page-header {
-    font-weight : 700;
-    margin : 0;
-    padding : 0;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
   }
 
   form {
-    margin : 1.5rem 0;
-    font-weight : 400;
-    overflow : hidden;
-    padding : 1rem;
-    background-color : #f5f5f5;
-    @include border-radius();
-    box-shadow : 0 1px 3px rgba(49, 62, 71, 0.14);
-    clear : both;
+    margin: 0;
+    font-weight: 400;
+    overflow: hidden;
+    padding: 1.5rem;
+    // background-color: #f5f5f5;
+    // @include border-radius();
+    // box-shadow: 0 1px 3px rgba(49, 62, 71, 0.14);
+    clear: both;
 
     section {
-      display : block;
-      margin-bottom : 2rem;
+      display: block;
+      margin-bottom: 2rem;
     }
 
     h1 {
-      padding : 0 0 1rem;
+      padding: 0 0 1rem;
     }
 
     .radio,
     .checkbox {
       &:after {
         visibility: hidden;
-        display:block;
-        font-size : 0;
-        content : ' ';
-        clear : both;
+        display: block;
+        font-size: 0;
+        content: ' ';
+        clear: both;
       }
 
       label {
-        margin-bottom : 0;
-        margin : 0 0 1rem 0;
-        font-weight : 600;
-        cursor : pointer;
+        margin-bottom: 0;
+        margin: 0 0 1rem 0;
+        font-weight: 600;
+        cursor: pointer;
 
         &:first-child:not(.field-label) {
-          margin-right : 2rem;
-          margin-left : 1rem;
+          margin-right: 2rem;
+          margin-left: 1rem;
         }
 
         &:not(.field-label) {
-          float : left;
-          margin-right : 1.5rem;
-          margin-left : 0.1rem;
+          float: left;
+          margin-right: 1.5rem;
+          margin-left: 0.1rem;
         }
       }
 
       &.vertical label:not(.field-label) {
-        clear : both;
+        clear: both;
       }
 
       &.disabled label:not(.field-label) {
-        opacity : 0.85;
+        opacity: 0.85;
       }
     }
 
     button[data-element-type='button'] {
-      display : inline-block;
-      line-height : 1.8rem;
+      display: inline-block;
+      line-height: 1.8rem;
       @include border-radius();
-      padding : 0.5rem;
-      border-width : 1px;
-      border-style : solid;
-      color : $black;
-      background-color : #e9e9e9;
-      cursor : pointer;
-      font-size : inherit;
-      margin-left : 0.5rem;
+      padding: 0.5rem;
+      border-width: 1px;
+      border-style: solid;
+      color: $black;
+      background-color: #e9e9e9;
+      cursor: pointer;
+      font-size: inherit;
+      margin-left: 0.5rem;
 
       &[data-button-type='submit-page'],
       &[data-button-type='custom'] {
@@ -374,27 +372,27 @@ section.page {
 
       &[data-button-type='previous-page'] {
         @extend .btn-default;
-        float : left;
-        margin-right : 0.5rem;
-        margin-left : 0;
+        float: left;
+        margin-right: 0.5rem;
+        margin-left: 0;
       }
 
       &[data-button-type='save'] {
         @extend .btn-subtle;
-        position : relative;
-        padding-left : 2.4rem;
+        position: relative;
+        padding-left: 2.4rem;
 
         &:before {
-          font-family : 'FontAwesome';
-          font-weight : 400;
-          content : '\f0c7';
-          position : absolute;
-          top : 50%;
-          left : 0.5rem;
-          width : 1.4rem;
-          height : 1.4rem;
-          line-height : 1;
-          margin-top : -0.7rem;
+          font-family: 'FontAwesome';
+          font-weight: 400;
+          content: '\f0c7';
+          position: absolute;
+          top: 50%;
+          left: 0.5rem;
+          width: 1.4rem;
+          height: 1.4rem;
+          line-height: 1;
+          margin-top: -0.7rem;
         }
       }
     }
@@ -406,50 +404,40 @@ section.page {
     /* Attachment files
      *-------------------------------------- */
     .empty > .file-table > .file-header {
-      display : none;
+      display: none;
     }
     .file-table {
-      display : table;
-      margin : 0px;
-      padding : 0px;
+      display: table;
+      margin: 0px;
+      padding: 0px;
 
       .file-header {
-        display : table-header-group;
-        color : $darkgray;
+        display: table-header-group;
+        color: $darkgray;
       }
       .file-row {
-        display : table-row;
-         > span {
-          display : table-cell;
-          padding : 0.5rem;
-           > a {
-            padding : 0 0.5rem;
+        display: table-row;
+        > span {
+          display: table-cell;
+          padding: 0.5rem;
+          > a {
+            padding: 0 0.5rem;
           }
         }
       }
       .file-container {
-        display : table-row-group;
+        display: table-row-group;
       }
     }
   }
 
   &.embedded {
     form {
-      margin : 0;
-      padding : 0;
-      background-color : transparent;
-      box-shadow : none;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      box-shadow: none;
     }
-  }
-}
-
-/* Embedded Core Forms
- *-------------------------------------- */
-.embedded-core-form{
-  padding: 0 1.5rem;
-  form{
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 
@@ -458,7 +446,7 @@ section.page {
 
 @media (max-width: 991px) {
   label.field-label {
-    width : 100%;
-    float : none;
+    width: 100%;
+    float: none;
   }
 }

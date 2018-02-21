@@ -24,7 +24,7 @@
       a {
         @include ms-respond(font-size, -2);
         padding: 0.5rem;
-        line-height: .5;
+        line-height: 0.5;
       }
     }
   }
